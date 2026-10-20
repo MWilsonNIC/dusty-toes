@@ -1,0 +1,121 @@
+@import "tailwindcss";
+/* build: npm run dev (watch) or npm run build (minified) */
+
+@theme {
+  /* container */
+  --content-width: clamp(200px, 90%, 1440px);
+
+  /* green */
+  --color-moss-300: oklch(0.7581 0.1008 109.22);
+  --color-moss-500: oklch(0.5443 0.0821 109.7);
+  --color-moss-700: oklch(0.3813 0.0532 108.68);
+
+  /* yellow */
+  --color-yolk-300: oklch(0.8834 0.1583 91.38);
+  --color-yolk-500: oklch(0.8303 0.166 87.4);
+  --color-yolk-700: oklch(0.6688 0.1201 84.55);
+
+  /* orange */
+  --color-tangerine-300: oklch(0.6746 0.155 45.62);
+  --color-tangerine-500: oklch(0.5754 0.1491 41.16);
+  --color-tangerine-700: oklch(0.4244 0.105 42.33);
+
+  /* pink */
+  --color-hotpink-300: oklch(0.6401 0.1801 6.16);
+  --color-hotpink-500: oklch(0.5268 0.1919 11.36);
+  --color-hotpink-700: oklch(0.3834 0.1349 10.34);
+
+  /* purple */
+  --color-grape-300: oklch(0.5197 0.1295 322.46);
+  --color-grape-500: oklch(0.3828 0.0897 322.22);
+  --color-grape-700: oklch(0.2654 0.0577 321.5);
+
+  /* blue */
+  --color-lake-300: oklch(0.5912 0.0584 253.02);
+  --color-lake-500: oklch(0.4507 0.0829 235.72);
+  --color-lake-700: oklch(0.3027 0.0527 230.76);
+
+  /* typography */
+  --font-headings: "Sue Ellen Francisco", cursive;
+  --font-body: "Atkinson Hyperlegible", sans-serif;
+  --text-6\.25xl: 4rem;
+  --text-6\.25xl--line-height: 1;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3 {
+    @apply tracking-wide text-mist-600 font-headings;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl uppercase max-w-[35ch];
+  }
+
+  .h1-big {
+    @apply block text-8xl;
+  }
+
+  .h1-md {
+    @apply block text-6.25xl;
+  }
+
+  .h1-sm {
+    @apply block text-3xl;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply uppercase font-bold tracking-wide text-moss-500;
+  }
+
+  h5 {
+    @apply font-bold;
+  }
+
+  p,
+  li {
+    @apply max-w-[60ch] font-body text-base text-mist-600 text-pretty pt-4;
+  }
+
+  blockquote {
+    @apply text-xl text-moss-700 italic max-w-[35ch] text-pretty;
+  }
+}
+
+@layer components {
+  /* links */
+  .link {
+    @apply hover:underline underline-offset-4 decoration-moss-700 cursor-pointer active:opacity-70 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+
+  .link-accent {
+    @apply hover:underline underline-offset-4 decoration-tangerine-500 cursor-pointer active:opacity-70 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+
+  .link-inline {
+    @apply text-moss-500 underline underline-offset-4 stroke-current cursor-pointer hover:no-underline active:opacity-70 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+
+  /* Hand-drawn edge for background blocks: put the colour on ::before
+     (e.g. "relative rough-edge before:bg-white/90") so only the edges wobble,
+     not the text. Uses the #rough-edge SVG filter defined in index.html. */
+  .rough-edge {
+    isolation: isolate;
+  }
+  .rough-edge::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    filter: url(#rough-edge);
+  }
+}

@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dusty Toes Llama + Alpaca Wellness, Education + Research</title>
+    <link rel="stylesheet" href="src/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Shared SVG filters for the hand-drawn look -->
+    <svg width="0" height="0" class="absolute" aria-hidden="true">
+      <!-- marker-style wobble for icons and divider lines -->
+      <filter id="hand-drawn" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.03 0.05"
+          numOctaves="2"
+          seed="11"
+          result="noise" />
+        <feDisplacementMap
+          in="SourceGraphic"
+          in2="noise"
+          scale="4"
+          xChannelSelector="R"
+          yChannelSelector="G" />
+      </filter>
+      <!-- wobbly edge for background blocks (used by the .rough-edge class) -->
+      <filter id="rough-edge" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.02 0.03"
+          numOctaves="2"
+          seed="4"
+          result="noise" />
+        <feDisplacementMap
+          in="SourceGraphic"
+          in2="noise"
+          scale="5"
+          xChannelSelector="R"
+          yChannelSelector="G" />
+      </filter>
+    </svg>
+
+    <header
+      class="hero-image bg-[url(../img/hero.jpg)] bg-cover bg-center min-h-svh md:min-h-[min(calc(100vw*567/850),100svh)] flex">
+      <div
+        class="w-full md:w-(--content-width) md:mx-auto px-8 flex flex-col items-end">
+        <div class="w-fit flex-1 flex flex-col justify-between gap-8 pb-6">
+          <h1
+            class="relative rough-edge before:bg-black/25 text-white p-4 pt-10 lg:pt-15">
+            <span class="h1-big">Dusty Toes</span>
+            <span class="h1-md">Llama + Alpaca</span>
+            <span class="h1-sm">Wellness, Education + Research</span>
+          </h1>
+          <div class="relative rough-edge before:bg-white/90">
+            <blockquote class="w-0 min-w-full max-w-none text-center pt-4">
+              Caring for camelids
+              <span class="block">~ and sharing what they teach us.</span>
+            </blockquote>
+            <p
+              class="w-0 min-w-full max-w-none text-mist-700 tracking-wide p-4">
+              We are a group of volunteers supporting farmers with care for
+              llamas and alpacas in situations when the farmer is no longer able
+              to - providing daily care and programming, and building a
+              nonprofit that can give these animals a sustainable home while
+              supporting the wellbeing of both llamas and people.
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- mission -->
+      <section>
+        <h2 class="w-full md:w-(--content-width) md:mx-auto px-8 pt-16">
+          Our Mission
+        </h2>
+        <div
+          class="grid lg:grid-cols-2 gap-x-16 w-full md:w-(--content-width) md:mx-auto px-8">
+          <div>
+            <p>
+              Dusty Toes exists to provide care and education for llamas and
+              alpacas.
+              <strong class="text-moss-700">
+                We provide daily care, medical attention, and enrichment for a
+                herd of South American camelids
+              </strong>
+              , many of them elderly or with special needs. Alongside their
+              care, we share what we learn — about camelid behaviour, welfare,
+              and the quiet good that comes from time spent with these gentle
+              animals.
+            </p>
+            <p>
+              We are currently focusing on a herd of 60 llamas and alpacas in
+              the Lanark Highlands. Some have lived on the farm all their lives;
+              others came needing a new home — from places like Toronto’s High
+              Park Zoo, the Waterloo Park Zoo, and nearby farms. The farm’s
+              longtime owners are getting older and can no longer provide the
+              standard of welfare they would want, and that is where we come in.
+              We help with the daily care, the training, and the programming,
+              while the animals stay in the home they know. It is a
+              collaboration, and the owners take part as much as they are able.
+            </p>
+          </div>
+          <div>
+            <p>
+              Often when owners reach this moment in their lives, the decision
+              to rehome is emotionally difficult — and it isn't what's best for
+              them or the animals. This is the herd's home, and they have made
+              friends within it. Rehoming would split them up. And where would
+              they go?
+            </p>
+            <p>
+              We are working toward incorporating as a nonprofit, so we can care
+              for this herd sustainably, for the rest of their lives.
+            </p>
+            <p>
+              Caring for the herd comes first — but it isn't all we imagine. As
+              we grow, we hope to share these animals more widely: as teachers
+              of camelid behaviour and welfare, and as partners in programs that
+              connect people and animals for the good of both. That's the
+              sanctuary we're building toward.
+              <strong class="text-moss-700">
+                Maybe a sanctuary isn't a place at all, but a movement.
+              </strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- who -->
+      <section class="@container overflow-x-clip bg-tangerine-500/95 mt-16">
+        <div
+          class="grid lg:grid-cols-2 gap-x-16 w-full md:w-(--content-width) md:mx-auto px-8">
+          <div class="pt-16">
+            <h2 class="text-white">Who We Are</h2>
+            <p class="text-white tracking-wide">
+              Dusty Toes is a small, dedicated team. Our care is
+              <strong>led day-to-day by Jacky,</strong>
+              who manages the animals' feeding, health, and enrichment and works
+              closely with our veterinarians,
+              <strong>alongside a committed group of volunteers</strong>
+              who show up week after week — for barn cleaning, shearing,
+              pedicures, treks, and everything in between.
+            </p>
+            <p class="text-white tracking-wide">
+              As we move toward nonprofit status, we're forming a board of
+              directors drawn from people with the expertise a sanctuary needs —
+              animal care, education, the arts, and community building. We'll
+              introduce them here as the board takes shape.
+            </p>
+            <!-- team icon: Lucide sprout, with the hand-drawn filter -->
+            <svg
+              class="size-16 mx-auto text-white mt-8 lg:mt-16 mb-16 lg:mb-8"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.4"
+              filter="url(#hand-drawn)"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true">
+              <path d="M7 20h10" />
+              <path d="M10 20c5.5-2.5.8-6.4 3-10" />
+              <path
+                d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z" />
+              <path
+                d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z" />
+            </svg>
+          </div>
+          <div
+            class="relative xl:min-h-120 -mx-8 md:-mx-[calc((100cqw_-_clamp(200px,90cqw,1440px))/2_+_2rem)] lg:-ml-8">
+            <img
+              src="img/allie.jpg"
+              alt="the MARS visitor centre"
+              class="block w-full h-full object-cover -scale-x-100" />
+            <!-- handwritten photo caption -->
+            <p
+              class="absolute pt-0 max-w-[calc(100%-2rem)] rough-edge before:bg-white/90 px-4 pt-4 pb-3 font-headings text-2xl tracking-wide text-moss-700 left-0 bottom-8">
+              Morning rounds, with supervision
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- spa -->
+      <section class="@container overflow-x-clip">
+        <div
+          class="grid lg:grid-cols-2 gap-x-16 w-full md:w-(--content-width) md:mx-auto px-8">
+          <div
+            class="relative xl:min-h-120 -mx-8 md:-mx-[calc((100cqw_-_clamp(200px,90cqw,1440px))/2_+_2rem)] lg:-mr-8">
+            <img
+              src="img/shear.jpg"
+              alt="the MARS visitor centre"
+              class="block w-full h-full object-cover -scale-x-100" />
+            <!-- handwritten photo caption -->
+            <p
+              class="absolute pt-0 max-w-[calc(100%-2rem)] rough-edge before:bg-white/90 px-4 pt-4 pb-3 font-headings text-2xl tracking-wide text-moss-700 right-0 bottom-8">
+              Fresh from the spa — topknot optional
+            </p>
+          </div>
+          <div class="py-16">
+            <h2>Dusty Toes Camelid Spa Team</h2>
+
+            <blockquote class="pt-12 pb-8">
+              We do shearing differently.
+            </blockquote>
+            <p>
+              Shearing is normally a stressful experience for the animals.
+              Professional shearers depend on speed — it's their livelihood, and
+              they need to get through as many as they can, as fast as they can.
+              That often means the llamas are shorn lying down, and the elderly
+              and special-needs animals don't get the care they deserve.
+            </p>
+            <p>
+              That's where we come in.
+              <strong>
+                we provide shearing and pedicures at a gentler pace
+              </strong>
+              — using hand clippers when the situation calls for it, and
+              electric shears otherwise. The animals are supported with soothing
+              music and quiet conversation. Afterwards there are treats, and a
+              gentle massage for anyone who wants one. We leave the young,
+              healthy alpacas to the professionals — but we're glad to shear an
+              elderly alpaca who needs a softer touch. As too the llamas we
+              shear them standing up and work with a soft touch and support them
+              through the process.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- herd -->
+      <section class="bg-lake-300/40">
+        <div class="w-full md:w-(--content-width) md:mx-auto px-8 py-16">
+          <div class="grid lg:grid-cols-2 gap-x-16">
+            <div class="contents lg:block">
+              <h2 class="text-mist-700">Meet the Herd</h2>
+
+              <h3 class="order-2 lg:order-none pt-8 text-mist-700">
+                A few of the faces you'll get to know:
+              </h3>
+            </div>
+            <div class="order-1 lg:order-none">
+              <p class="text-mist-700">
+                Currently we share the care of roughly 60 llamas and alpacas —
+                around
+                <strong>33 alpacas and 27 llamas,</strong>
+                ranging from youngsters to elders well into their twenties. A
+                good number are seniors in our care for the rest of their days,
+                which is exactly how we like it: no more breeding, no revolving
+                door, just a herd growing older together.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid lg:grid-cols-3 gap-x-px mt-8 lg:bg-white/60">
+            <section
+              class="relative rough-edge before:bg-white max-lg:before:[filter:none] grid grid-rows-subgrid row-span-5 mb-6 lg:mb-0">
+              <img
+                src="img/Coquette.jpg"
+                alt=""
+                class="block w-full aspect-[4/3] object-cover" />
+              <div class="p-6 grid grid-rows-subgrid row-span-4">
+                <h4>Dusty</h4>
+                <p
+                  class="pt-1 font-headings text-2xl tracking-wide text-tangerine-500">
+                  The one who started it all
+                </p>
+                <p class="pb-6">
+                  At 18, Dusty is the matriarch of the trekking team — and the
+                  reason Dusty Toes exists. This whole nonprofit grew out of
+                  caring for her.
+                </p>
+                <div class="grid grid-cols-[1fr_auto] items-center gap-x-4">
+                  <!-- hand-drawn divider (uses the #hand-drawn filter) -->
+                  <svg
+                    class="col-span-2 w-full h-4 mb-2 text-lake-300/60"
+                    filter="url(#hand-drawn)"
+                    aria-hidden="true">
+                    <line
+                      x1="2"
+                      y1="50%"
+                      x2="99%"
+                      y2="50%"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round" />
+                  </svg>
+                  <dl
+                    class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 content-start font-body text-sm">
+                    <dt class="font-bold text-moss-700">Species</dt>
+                    <dd class="text-mist-700">Llama</dd>
+                    <dt class="font-bold text-moss-700">Age</dt>
+                    <dd class="text-mist-700">18</dd>
+                    <dt class="font-bold text-moss-700">Favourite treat</dt>
+                    <dd class="text-mist-700">Apple slices</dd>
+                    <dt class="font-bold text-moss-700">Best friend</dt>
+                    <dd class="text-mist-700">Dolly</dd>
+                  </dl>
+                  <!-- handwritten note (placeholder text) -->
+                  <p
+                    class="lg:max-xl:hidden pt-0 max-w-[18ch] font-headings text-xl leading-tight tracking-widest text-lake-500">
+                    Will lead any trek… if apples are involved!
+                  </p>
+                </div>
+              </div>
+            </section>
+            <section
+              class="relative rough-edge before:bg-white max-lg:before:[filter:none] grid grid-rows-subgrid row-span-5 mb-6 lg:mb-0">
+              <img
+                src="img/Mordechai.jpg"
+                alt=""
+                class="block w-full aspect-[4/3] object-cover" />
+              <div class="p-6 grid grid-rows-subgrid row-span-4">
+                <h4>Perseus</h4>
+                <p
+                  class="pt-1 font-headings text-2xl tracking-wide text-tangerine-500">
+                  A special-care resident
+                </p>
+                <p class="pb-6">
+                  One of our alpacas with a health story to tell. We're working
+                  hard to keep him comfortable and thriving, one gentle day at a
+                  time.
+                </p>
+                <div class="grid grid-cols-[1fr_auto] items-center gap-x-4">
+                  <!-- hand-drawn divider (uses the #hand-drawn filter) -->
+                  <svg
+                    class="col-span-2 w-full h-4 mb-2 text-lake-300/60"
+                    filter="url(#hand-drawn)"
+                    aria-hidden="true">
+                    <line
+                      x1="2"
+                      y1="50%"
+                      x2="99%"
+                      y2="50%"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round" />
+                  </svg>
+                  <dl
+                    class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 content-start font-body text-sm">
+                    <dt class="font-bold text-moss-700">Species</dt>
+                    <dd class="text-mist-700">Alpaca</dd>
+                    <dt class="font-bold text-moss-700">Age</dt>
+                    <dd class="text-mist-700">14</dd>
+                    <dt class="font-bold text-moss-700">Favourite treat</dt>
+                    <dd class="text-mist-700">Carrot coins</dd>
+                    <dt class="font-bold text-moss-700">Best friend</dt>
+                    <dd class="text-mist-700">Anne</dd>
+                  </dl>
+                  <!-- handwritten note (placeholder text) -->
+                  <p
+                    class="lg:max-xl:hidden pt-0 max-w-[18ch] font-headings text-xl leading-tight tracking-widest text-lake-500">
+                    Hums when he gets his toes trimmed
+                  </p>
+                </div>
+              </div>
+            </section>
+            <section
+              class="relative rough-edge before:bg-white max-lg:before:[filter:none] grid grid-rows-subgrid row-span-5">
+              <img
+                src="img/Babe.jpg"
+                alt=""
+                class="block w-full aspect-[4/3] object-cover" />
+              <div class="p-6 grid grid-rows-subgrid row-span-4">
+                <h4>Noel</h4>
+                <p
+                  class="pt-1 font-headings text-2xl tracking-wide text-tangerine-500">
+                  The youngest of the herd
+                </p>
+                <p class="pb-6">
+                  At seven months, Noel is proof that a sanctuary is as much
+                  about beginnings as endings. His mum, Chewpaca (Chewy to her
+                  friends), arrived with her family from the Waterloo Park zoo
+                  in May 2025.
+                </p>
+                <div class="grid grid-cols-[1fr_auto] items-center gap-x-4">
+                  <!-- hand-drawn divider (uses the #hand-drawn filter) -->
+                  <svg
+                    class="col-span-2 w-full h-4 mb-2 text-lake-300/60"
+                    filter="url(#hand-drawn)"
+                    aria-hidden="true">
+                    <line
+                      x1="2"
+                      y1="50%"
+                      x2="99%"
+                      y2="50%"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round" />
+                  </svg>
+                  <dl
+                    class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 content-start font-body text-sm">
+                    <dt class="font-bold text-moss-700">Species</dt>
+                    <dd class="text-mist-700">Alpaca</dd>
+                    <dt class="font-bold text-moss-700">Age</dt>
+                    <dd class="text-mist-700">7 months</dd>
+                    <dt class="font-bold text-moss-700">Favourite treat</dt>
+                    <dd class="text-mist-700">Fresh clover</dd>
+                    <dt class="font-bold text-moss-700">Best friend</dt>
+                    <dd class="text-mist-700">Domino</dd>
+                  </dl>
+                  <!-- handwritten note (placeholder text) -->
+                  <p
+                    class="lg:max-xl:hidden pt-0 max-w-[18ch] font-headings text-xl leading-tight tracking-widest text-lake-500">
+                    Never more than a step from Mum
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+          <!-- <p class="mt-4">
+            As we develop, this is where you'll be able to meet each member of
+            the herd — and where we'll honour those loved and lost.
+          </p> -->
+        </div>
+      </section>
+
+      <!-- help (icons: Lucide, lucide.dev, ISC licence) -->
+      <section>
+        <div class="w-full md:w-(--content-width) md:mx-auto px-8 py-16">
+          <h2>Get Involved</h2>
+          <p>
+            We couldn't do this without help — and there's more than one way to
+            give it.
+          </p>
+        </div>
+
+        <div
+          class="lg:columns-2 gap-x-16 w-full md:w-(--content-width) md:mx-auto px-8 pb-4">
+          <section
+            class="grid grid-cols-[auto_1fr] gap-x-6 items-start break-inside-avoid mb-12">
+            <svg
+              class="size-16 mt-1 text-moss-500"
+              viewBox="0 2.0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.4"
+              filter="url(#hand-drawn)"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true">
+              <path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16" />
+              <path
+                d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9" />
+              <path d="m2 15 6 6" />
+              <path
+                d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z" />
+            </svg>
+            <div>
+              <h3>Volunteer</h3>
+              <p>
+                Whether you can muck a barn, mend a fence, help on a trek, or
+                lend a skill from home, there's a place for you here. We welcome
+                volunteers of all abilities and backgrounds; caring for a herd
+                takes every kind of hand.
+              </p>
+            </div>
+          </section>
+          <section
+            class="grid grid-cols-[auto_1fr] gap-x-6 items-start break-inside-avoid mb-12">
+            <svg
+              class="size-16 mt-1 text-moss-500"
+              viewBox="0 1.25 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.4"
+              filter="url(#hand-drawn)"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true">
+              <path
+                d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" />
+              <path d="M12 22V12" />
+              <path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7" />
+              <path d="m7.5 4.27 9 5.15" />
+            </svg>
+            <div>
+              <h3>Donate goods (In Kind Donations)</h3>
+              <p>
+                Goods are often seasonal. Keep an eye on our social media! We
+                have put calls out for pools, pumpkins, radios (yes they love
+                music), old blankets, gently used mini horse blankets. Although
+                we work with a local hay and straw supplier we are always
+                grateful for some extra to come our way.
+              </p>
+            </div>
+          </section>
+          <section
+            class="grid grid-cols-[auto_1fr] gap-x-6 items-start break-inside-avoid mb-12">
+            <svg
+              class="size-16 mt-1 text-moss-500"
+              viewBox="0 1.25 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.4"
+              filter="url(#hand-drawn)"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true">
+              <path
+                d="M3 10h18V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7" />
+              <path d="M8 2v4" />
+              <path d="M16 2v4" />
+              <path
+                d="M21.29 14.7a2.43 2.43 0 0 0-2.65-.52c-.3.12-.57.3-.8.53l-.34.34-.35-.34a2.43 2.43 0 0 0-2.65-.53c-.3.12-.56.3-.79.53-.95.94-1 2.53.2 3.74L17.5 22l3.6-3.55c1.2-1.21 1.14-2.8.19-3.74Z" />
+            </svg>
+            <div>
+              <h3>Lead a third party event</h3>
+              <p>
+                If you have a specific skill you would like to share with a
+                group, such as, yoga teacher, musician, a craft teacher (there
+                is a lot of fiber to ‘play’ with), painting class contact us. We
+                are open to suggestions. One requirement is that it is llama
+                approved.
+              </p>
+            </div>
+          </section>
+          <section
+            class="grid grid-cols-[auto_1fr] gap-x-6 items-start break-inside-avoid mb-12">
+            <svg
+              class="size-16 mt-1 text-moss-500"
+              viewBox="0 5.25 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.4"
+              filter="url(#hand-drawn)"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true">
+              <rect width="20" height="12" x="2" y="6" rx="2" />
+              <circle cx="12" cy="12" r="2" />
+              <path d="M6 12h.01M18 12h.01" />
+            </svg>
+            <div>
+              <h3>Donate funds</h3>
+              <p>
+                Donations are not currently tax-deductible. Every dollar you
+                give goes directly to caring for the herd— from feed and hay, to
+                pellets, supplements, and the veterinary care that comes with an
+                aging herd. We're not yet a registered charity, so — but your
+                support makes a real difference right now. Donations help us
+                provide the care our animals need today while we work toward
+                charitable status, which will allow us to grow our impact
+                tomorrow.
+              </p>
+              <p>
+                We are proud to shop at
+                <a
+                  href="https://www.wool.ca/"
+                  class="link-inline"
+                  target="_blank"
+                  rel="noopener">
+                  Woolgrowers
+                </a>
+                for their pellets, supplements, and medical supplies. Your
+                donations help make these everyday essentials possible.
+              </p>
+            </div>
+          </section>
+          <section
+            class="grid grid-cols-[auto_1fr] gap-x-6 items-start break-inside-avoid mb-12">
+            <svg
+              class="size-16 mt-1 text-moss-500"
+              viewBox="0 4.25 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.4"
+              filter="url(#hand-drawn)"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true">
+              <path
+                d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
+              <path d="M13 5v2" />
+              <path d="M13 17v2" />
+              <path d="M13 11v2" />
+            </svg>
+            <div>
+              <h3>Join a fundraising campaign</h3>
+              <p>
+                From time to time we run raffles and fundraising campaigns for
+                specific needs — a surgery, a winter's worth of hay. Follow
+                along so you don't miss the next one.
+              </p>
+            </div>
+          </section>
+
+          <section
+            class="grid grid-cols-[auto_1fr] gap-x-6 items-start break-inside-avoid mb-12">
+            <svg
+              class="size-16 mt-1 text-moss-500"
+              viewBox="0 5.25 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.4"
+              filter="url(#hand-drawn)"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true">
+              <path d="m3 11 18-5v12L3 14v-3z" />
+              <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
+            </svg>
+            <div>
+              <h3>Spread the word</h3>
+              <p>
+                <a
+                  href="https://www.facebook.com/jacky.sawatzky"
+                  class="link-inline"
+                  target="_blank"
+                  rel="noopener">
+                  Follow us on Facebook
+                </a>
+                , share our story, and help more people discover the herd.
+              </p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-- contact -->
+    <footer class="bg-moss-700/95 mt-16">
+      <div
+        class="grid lg:grid-cols-[1fr_2fr] gap-x-16 gap-y-12 w-full md:w-(--content-width) md:mx-auto px-8 py-16">
+        <div>
+          <h2 class="text-white">Contact Us</h2>
+          <p class="text-white/90">
+            Questions about the herd, offers of help, or just want to say hello?
+            Send us a note and we'll get back to you.
+          </p>
+          <!-- TODO: point href at the volunteer log-in page once it exists -->
+          <a
+            href="#"
+            class="inline-block mt-8 border-2 border-white hover:bg-white/80 px-5 py-2 font-body font-bold tracking-wide text-white hover:text-moss-700 active:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yolk-500">
+            Volunteer log-in
+          </a>
+        </div>
+
+        <!-- TODO: set action to your form service (e.g. Formspree, Netlify Forms) -->
+        <form action="" method="post" class="grid gap-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label
+                for="contact-first-name"
+                class="block font-body text-sm text-white mb-1">
+                First name
+              </label>
+              <input
+                id="contact-first-name"
+                name="first_name"
+                type="text"
+                autocomplete="given-name"
+                required
+                class="block w-full bg-white px-3 py-2 font-body text-mist-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lake-300" />
+            </div>
+            <div>
+              <label
+                for="contact-last-name"
+                class="block font-body text-sm text-white mb-1">
+                Last name
+              </label>
+              <input
+                id="contact-last-name"
+                name="last_name"
+                type="text"
+                autocomplete="family-name"
+                required
+                class="block w-full bg-white px-3 py-2 font-body text-mist-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lake-300" />
+            </div>
+            <div>
+              <label
+                for="contact-email"
+                class="block font-body text-sm text-white mb-1">
+                Email
+              </label>
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                class="block w-full bg-white px-3 py-2 font-body text-mist-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lake-300" />
+            </div>
+            <div>
+              <label
+                for="contact-phone"
+                class="block font-body text-sm text-white mb-1">
+                Phone
+                <span class="text-white/70">(optional)</span>
+              </label>
+              <input
+                id="contact-phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                class="block w-full bg-white px-3 py-2 font-body text-mist-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lake-300" />
+            </div>
+          </div>
+
+          <fieldset>
+            <legend class="font-body text-sm text-white mb-3">
+              What are you getting in touch about?
+            </legend>
+            <div class="grid sm:grid-cols-2 gap-x-6 gap-y-3">
+              <label
+                class="flex items-center gap-3 font-body text-white cursor-pointer">
+                <input
+                  type="radio"
+                  name="reason"
+                  value="volunteering"
+                  class="size-4 accent-lake-300"
+                  required />
+                Volunteering
+              </label>
+              <label
+                class="flex items-center gap-3 font-body text-white cursor-pointer">
+                <input
+                  type="radio"
+                  name="reason"
+                  value="donating-goods"
+                  class="size-4 accent-lake-300" />
+                Donating goods
+              </label>
+              <label
+                class="flex items-center gap-3 font-body text-white cursor-pointer">
+                <input
+                  type="radio"
+                  name="reason"
+                  value="donating-funds"
+                  class="size-4 accent-lake-300" />
+                Donating funds
+              </label>
+              <label
+                class="flex items-center gap-3 font-body text-white cursor-pointer">
+                <input
+                  type="radio"
+                  name="reason"
+                  value="leading-an-event"
+                  class="size-4 accent-lake-300" />
+                Leading an event
+              </label>
+              <label
+                class="flex items-center gap-3 font-body text-white cursor-pointer">
+                <input
+                  type="radio"
+                  name="reason"
+                  value="camelid-spa"
+                  class="size-4 accent-lake-300" />
+                Camelid spa (shearing &amp; pedicures)
+              </label>
+              <label
+                class="flex items-center gap-3 font-body text-white cursor-pointer">
+                <input
+                  type="radio"
+                  name="reason"
+                  value="something-else"
+                  class="size-4 accent-lake-300" />
+                Something else
+              </label>
+            </div>
+          </fieldset>
+
+          <div>
+            <label
+              for="contact-message"
+              class="block font-body text-sm text-white mb-1">
+              Message
+            </label>
+            <textarea
+              id="contact-message"
+              name="message"
+              rows="5"
+              required
+              class="block w-full bg-white px-3 py-2 font-body text-mist-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yolk-500"></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="justify-self-start bg-white hover:bg-white/80 px-6 py-2 font-body font-bold tracking-wide text-moss-700 active:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white cursor-pointer">
+            Send message
+          </button>
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>
